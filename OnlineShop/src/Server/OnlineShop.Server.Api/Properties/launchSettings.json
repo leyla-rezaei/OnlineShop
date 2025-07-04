@@ -1,0 +1,53 @@
+{
+    "profiles": {
+        "OnlineShop.Server.Api": {
+            "commandName": "Project",
+            "launchBrowser": true,
+            "launchUrl": "swagger",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "dotnetRunMessages": true,
+            "applicationUrl": "http://localhost:5271"
+        },
+        "WSL": {
+            "commandName": "WSL2",
+            "launchBrowser": true,
+            "launchUrl": "http://localhost:5271/swagger",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:5271"
+            }
+        },
+        "Docker": {
+            "commandName": "SdkContainer",
+            "launchBrowser": true,
+            "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+            "DockerfileRunArguments": "-v C:\\DockerVolumes\\2D12ED06-1EDD-4EE5-B1BD-767CD6A91467:/container_volume",
+            "environmentVariables": {
+                "ASPNETCORE_HTTP_PORTS": "5271",
+                "ConnectionStrings__SqliteConnectionString": "Data Source=/container_volume/App_Data/OnlineShopDb.db;"
+            },
+            "publishAllPorts": true,
+            "useSSL": false,
+            "httpPort": 5271
+        },
+        "IIS Express": {
+            "commandName": "IISExpress",
+            "launchBrowser": true,
+            "launchUrl": "swagger",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
+    },
+    "iisSettings": {
+        "windowsAuthentication": false,
+        "anonymousAuthentication": true,
+        "iisExpress": {
+            "applicationUrl": "http://localhost:55271/",
+            "httpPort": 5271
+        }
+    },
+    "$schema": "http://json.schemastore.org/launchsettings.json"
+}

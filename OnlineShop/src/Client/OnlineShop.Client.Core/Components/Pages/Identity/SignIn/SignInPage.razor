@@ -1,0 +1,9 @@
+@attribute [Route(Urls.SignInPage)]
+@attribute [Route("{culture?}" + Urls.SignInPage)]
+@inherits AppPageBase
+
+<AppPageData Title="@Localizer[nameof(AppStrings.SignInPageTitle)]" />
+
+<section>
+    <SignInPanel SignInPanelType="SignInPanelType.Full" />
+</section>

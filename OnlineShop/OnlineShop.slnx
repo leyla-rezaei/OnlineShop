@@ -1,0 +1,57 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="DebugBlazorServer" />
+    <BuildType Name="Release" />
+  </Configurations>
+  <Folder Name="/.SolutionItems/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path=".vsconfig" />
+    <File Path="Clean.bat" />
+    <File Path="global.json" />
+    <File Path="README.md" />
+	<File Path="settings.VisualStudio.json" />
+    <File Path="Bit.ResxTranslator.json" />
+    <File Path="src/Directory.Build.props" />
+    <File Path="src/Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/.SolutionItems/.github/">
+	<File Path=".github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/.SolutionItems/.github/workflows/">
+    <File Path=".github/workflows/cd.yml" />
+    <File Path=".github/workflows/ci.yml" />
+  </Folder>
+  <Folder Name="/Server/">
+	<Project Path="src/Server/OnlineShop.Server.Web/OnlineShop.Server.Web.csproj" />
+    <Project Path="src/Server/OnlineShop.Server.Api/OnlineShop.Server.Api.csproj" />
+	<Project Path="src/Server/OnlineShop.Server.Shared/OnlineShop.Server.Shared.csproj" />
+  </Folder>
+  <Folder Name="/Client/">
+    <Project Path="src/Client/OnlineShop.Client.Core/OnlineShop.Client.Core.csproj" />
+    <Project Path="src/Client/OnlineShop.Client.Maui/OnlineShop.Client.Maui.csproj">
+      <Build Solution="DebugBlazorServer|*" Project="false" />
+      <Deploy Solution="Debug|*" />
+      <Deploy Solution="Release|*" />
+    </Project>
+    <Project Path="src/Client/OnlineShop.Client.Web/OnlineShop.Client.Web.csproj">
+      <Build Solution="DebugBlazorServer|*" Project="false" />
+    </Project>
+    <Project Path="src/Client/OnlineShop.Client.Windows/OnlineShop.Client.Windows.csproj">
+		<Build Solution="DebugBlazorServer|*" Project="false" />
+	</Project>
+  </Folder>
+  <Folder Name="/Shared/">
+    <Project Path="src/Shared/OnlineShop.Shared.csproj" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="src/Tests/OnlineShop.Tests.csproj">
+      <Build Solution="DebugBlazorServer|*" Project="false" />
+    </Project>
+  </Folder>
+  <Properties Name="ExtensibilityGlobals" Scope="PostLoad">
+    <Property Name="RESX_CodeReferences" Value="{&quot;Items&quot;:[{&quot;Expression&quot;:&quot;\\W($File.$Key)\\W&quot;,&quot;Extensions&quot;:&quot;.cs,.xaml,.cshtml,.razor&quot;,&quot;IsCaseSensitive&quot;:true,&quot;SingleLineComment&quot;:&quot;\/\/&quot;},{&quot;Expression&quot;:&quot;\\W($File.$Key)\\W&quot;,&quot;Extensions&quot;:&quot;.vbhtml&quot;,&quot;IsCaseSensitive&quot;:false,&quot;SingleLineComment&quot;:null},{&quot;Expression&quot;:&quot;ResourceManager.GetString\\(\&quot;($Key)\&quot;\\)&quot;,&quot;Extensions&quot;:&quot;.cs&quot;,&quot;IsCaseSensitive&quot;:true,&quot;SingleLineComment&quot;:&quot;\/\/&quot;},{&quot;Expression&quot;:&quot;typeof\\((\\w+\\.)*($File)\\).+\&quot;($Key)\&quot;|\&quot;($Key)\&quot;.+typeof\\((\\w+\\.)*($File)\\)&quot;,&quot;Extensions&quot;:&quot;.cs&quot;,&quot;IsCaseSensitive&quot;:true,&quot;SingleLineComment&quot;:&quot;\/\/&quot;},{&quot;Expression&quot;:&quot;\\W($Key)\\W&quot;,&quot;Extensions&quot;:&quot;.vb&quot;,&quot;IsCaseSensitive&quot;:false,&quot;SingleLineComment&quot;:&quot;'&quot;},{&quot;Expression&quot;:&quot;\\W($File::$Key)\\W&quot;,&quot;Extensions&quot;:&quot;.cpp,.c,.hxx,.h&quot;,&quot;IsCaseSensitive&quot;:true,&quot;SingleLineComment&quot;:&quot;\/\/&quot;},{&quot;Expression&quot;:&quot;&amp;lt;%\\$\\s+Resources:\\s*($File)\\s*,\\s*($Key)\\s*%&amp;gt;&quot;,&quot;Extensions&quot;:&quot;.aspx,.ascx,.master&quot;,&quot;IsCaseSensitive&quot;:true,&quot;SingleLineComment&quot;:null},{&quot;Expression&quot;:&quot;StringResourceKey\\.($Key)&quot;,&quot;Extensions&quot;:&quot;.cs&quot;,&quot;IsCaseSensitive&quot;:true,&quot;SingleLineComment&quot;:&quot;\/\/&quot;},{&quot;Expression&quot;:&quot;\\.($Key)&quot;,&quot;Extensions&quot;:&quot;.ts,.html&quot;,&quot;IsCaseSensitive&quot;:true,&quot;SingleLineComment&quot;:&quot;\/\/&quot;}]}" />
+    <Property Name="RESX_NeutralResourcesLanguage" Value="en-US" />
+  </Properties>
+</Solution>

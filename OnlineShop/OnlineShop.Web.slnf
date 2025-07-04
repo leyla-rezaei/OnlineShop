@@ -1,0 +1,14 @@
+{
+  "solution": {
+    "path": "OnlineShop.slnx",
+    "projects": [
+      "src\\Client\\OnlineShop.Client.Core\\OnlineShop.Client.Core.csproj",
+      "src\\Client\\OnlineShop.Client.Web\\OnlineShop.Client.Web.csproj",
+      "src\\Server\\OnlineShop.Server.Api\\OnlineShop.Server.Api.csproj",
+	  "src\\Server\\OnlineShop.Server.Shared\\OnlineShop.Server.Shared.csproj",
+      "src\\Server\\OnlineShop.Server.Web\\OnlineShop.Server.Web.csproj",
+      "src\\Shared\\OnlineShop.Shared.csproj",
+      "src\\Tests\\OnlineShop.Tests.csproj"
+    ]
+  }
+}
